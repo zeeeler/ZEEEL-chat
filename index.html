@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<title>ZEEEL chat</title>
+<head>
+<p2>ZEEEL chat</p2>
+<body>
+<input onkeydown="if(event.keyCode===13)submit(this)">
+<script>
+var ws = new WebSocket('ws://localhost/')
+ws.onmessage = funcation（event） ｛
+    var comment = document.creatElement('li');
+	comment.textContent = event.data;
+	document.body.appendChild(comment);
+};
+function submit(textbox) {
+    ws.send(textbox.value) ;
+	textbox.value = '';
+}
+</script>
+</body>
