@@ -6,7 +6,7 @@
 <body>
 <input onkeydown="if(event.keyCode===13)submit(this)">
 <script>
-var ws = new WebSocket('ws://localhost/')
+var ws = new WebSocket('ws://localhost:8080');
 ws.onmessage = funcation（event） ｛
     var comment = document.creatElement('li');
 	comment.textContent = event.data;
